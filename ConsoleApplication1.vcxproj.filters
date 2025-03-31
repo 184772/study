@@ -18,12 +18,21 @@
     <ClCompile Include="ConsoleApplication1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ground_loading.cpp">
+    <ClCompile Include="file_write_read.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="hero.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="context.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ground_loading.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="story.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,50 +2,21 @@
 //
 
 
-
+#include<Windows.h>//头文件要先包含windows。h再包含mmsystem。h，否则会导致宏定义冲突报错,但为什么这样就不会报错呢?
 #include<iostream>
 #include"ground_loading.h"
 #include<regex>
+#include"hero.cpp"
+#include"story.h"
+#include<thread>
+#include<mmsystem.h>
 
-
-using namespace std;
-class people {//新建父类
-public:
-    string name1;
-    int age1, hight1, blood1;
-    string id1;
-
-     virtual void fight() {//虚函数
-        cout << "发动攻击" << endl;
-     }
-     virtual void defend() {
-        
-     }
-
-private:    
-};
-
-class m4a1 :public people {//新建子类继承于people
-public:
-    void fight() override {//重写虚函数
-        cout << "m4a1攻击了一次" << endl;
-    }
-    void defend() override {
-        cout << "m4a1防御了一次" << endl;
-    }
-    
-};
-class ak12 :public people {
-public:
-    void fight() override {
-        cout << "ak12攻击了一次" << endl;
-    }
-    void defend() override {
-        cout << "ak12防御了一次" << endl;
-    }
-};
-
-
+#pragma comment (lib,"winmm.lib")
+void music(void) {
+      mciSendString(TEXT("open \"D:\\c++learn\\homeworks\\ConsoleApplication1\\ConsoleApplication1\\WindyHill.mp3\" alias song") ,NULL, 0, NULL);
+      mciSendString(TEXT(" play song repeat"), NULL, 0, NULL);
+      Sleep(20000);
+}
 
 
 int main()
@@ -54,12 +25,17 @@ int main()
 
     //m().information_wrriten(, 18, 100);
     //m.show();
+    std::thread t(music);
+
+    story();
+    story_1();
     people* animal = new m4a1;
     animal->fight();
     people* people = new ak12;
     people->fight();
     animal->defend();
-    k();
+    out();
+    t.join();
 }
 /*#include <iostream>
 #include <vector>

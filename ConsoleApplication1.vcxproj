@@ -128,10 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ConsoleApplication1.cpp" />
-    <ClCompile Include="ground_loading.cpp" />
+    <ClCompile Include="file_write_read.cpp" />
+    <ClCompile Include="hero.cpp" />
+    <ClCompile Include="context.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ground_loading.h" />
+    <ClInclude Include="story.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
